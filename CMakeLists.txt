@@ -9,6 +9,6 @@ include_directories ( Source Source/Metadata Source/FreeImageToolkit Source/LibJ
  )
 add_library ( FreeImage ${Sources} )
 
-file ( GLOB TestSources "TestAPI/*.cpp" )
-add_executable ( FreeImageTest ${TestSources} )
-target_link_libraries ( FreeImageTest FreeImage )
+#file ( GLOB TestSources "TestAPI/*.cpp" )
+#add_executable ( FreeImageTest ${TestSources} )
+#target_link_libraries ( FreeImageTest FreeImage )

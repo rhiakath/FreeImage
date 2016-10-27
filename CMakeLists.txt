@@ -7,8 +7,10 @@ set ( Sources ./Source/FreeImage/BitmapAccess.cpp ./Source/FreeImage/ColorLookup
 add_definitions ( -Os -fexceptions -fvisibility=hidden -DNO_LCMS -DDISABLE_PERF_MEASUREMENT -D__ANSI__ )
 include_directories ( Source Source/Metadata Source/FreeImageToolkit Source/LibJPEG Source/LibPNG Source/LibTIFF4 Source/ZLib Source/LibOpenJPEG Source/OpenEXR Source/OpenEXR/Half Source/OpenEXR/Iex Source/OpenEXR/IlmImf Source/OpenEXR/IlmThread Source/OpenEXR/Imath Source/OpenEXR/IexMath Source/LibRawLite Source/LibRawLite/dcraw Source/LibRawLite/internal Source/LibRawLite/libraw Source/LibRawLite/src Source/LibWebP Source/LibJXR Source/LibJXR/common/include Source/LibJXR/image/sys Source/LibJXR/jxrgluelib
  )
-add_library ( FreeImage ${Sources} )
+add_library ( freeimage ${Sources} )
 
 #file ( GLOB TestSources "TestAPI/*.cpp" )
 #add_executable ( FreeImageTest ${TestSources} )
 #target_link_libraries ( FreeImageTest FreeImage )
+install ( TARGETS freeimage DESTINATION lib )
+install ( FILES Source/FreeImage.h DESTINATION include )
